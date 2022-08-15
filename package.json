@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@discordjs/rest": "^1.0.0",
+    "axios": "^0.27.2",
+    "axios-oauth-client": "^1.5.0",
+    "discord-api-types": "^0.36.2",
+    "discord.js": "^14.0.1",
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.7",
+    "quick.db": "^7.1.3",
+    "uuid": "^8.3.2"
+  },
+  "name": "github_oauth2_discord_bot",
+  "version": "2.0.0",
+  "description": "GitHub OAuth2 Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "/help"
+  },
+  "keywords": [
+    "GitHub-oAuth",
+    "oAuth",
+    "GitHub",
+    "DiscordBot"
+  ],
+  "author": "mazkdevf <mazkdevf@gmail.com>",
+  "license": "ISC"
+}
