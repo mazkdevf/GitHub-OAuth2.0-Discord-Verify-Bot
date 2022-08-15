@@ -34,7 +34,7 @@ module.exports = (interaction) => {
 
         const params = new URLSearchParams({
             'client_id': process.env.GitHub_APP_CLIENTID,
-            'redirect_uri': 'http://localhost:3000/callback',
+            'redirect_uri': process.env.GitHub_REDIRECT_URI + 'callback',
             'scope': 'user',
             'state': this.uniqId
         });
@@ -53,7 +53,7 @@ module.exports = (interaction) => {
             url: process.env.GitHub_TokenUrl,
             client_id: process.env.GitHub_APP_CLIENTID,
             client_secret: process.env.GitHub_APP_SECRET,
-            redirect_uri: 'http://localhost:3000/callback',
+            redirect_uri: process.env.GitHub_REDIRECT_URI + 'callback',
             code: req.query.code,
             scope: req.query.state,
         });
@@ -66,7 +66,7 @@ module.exports = (interaction) => {
         }
 
         if (ResponseFromAPI.includes('error=bad_verification_code')) {
-            res.send('Unable to verify, Reason: Verification Code is invalid <br><br> <a style="color: blue; font-weight: 700;" href="http://localhost:3000/login">Try Again</a>');
+            res.send('Unable to verify, Reason: Verification Code is invalid <br><br> <a style="color: blue; font-weight: 700;" href="' + process.env.GitHub_REDIRECT_URI + 'login">Try Again</a>');
             return false;
         }
 

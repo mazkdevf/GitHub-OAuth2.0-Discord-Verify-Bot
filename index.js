@@ -33,6 +33,8 @@ process.on('unhandledRejection', error => {
     console.error('Unhandled promise rejection:', error);
 });
 
+
+//* Discord.JS Has Started
 client.once('ready', async () => {
     console.clear();
     console.log("Bot Online");
