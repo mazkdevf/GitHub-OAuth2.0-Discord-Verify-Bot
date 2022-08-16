@@ -1,5 +1,9 @@
 ## GitHub OAuth2 Discord Verification Bot
 
+- Simple Discord Bot what uses GitHub OAuth 2.0 for verifying Discord Members to the server.
+
+## Todo
+- Better Database for storing Discord ID + The Github ID / Data from verification [userid, name, profile icon, etc]
 
 ## Example .env File
 
